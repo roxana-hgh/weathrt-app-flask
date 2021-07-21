@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{city}}'s Current Weather</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <div class="Blur_bg">
+        <div class="main">
+            <div class="up">
+                <div class="row">
+                    <h1 style="font-size:xxx-large;">{{city}}</h1>
+                    <h4>{{dt.strftime('%a, %b %d,   %I:%M %p')}}</h4>   
+                </div>
+                <div class="row">
+                    <img src="{{icon}}" alt="">
+                </div>
+            </div>
+            <div class="down">
+                 <div class="rowd">
+                <h4>Description:</h4>
+                <h1>{{weatherd}}</h1>
+                </div> 
+                 <div class="rowd">
+                     <h4>Temperature:</h4>
+                     <h1>{{temp}}&#8451 </h1>
+                 </div>
+                 <div class="rowd">
+                     <h4>Feels Like:</h4>
+                     <h1>{{feels}}&#8451</h1>
+                 </div>
+                 <div class="rowd">
+                    <h4>Humidity:</h4>
+                    <h1>{{humidity}}%</h1>
+                </div>  
+                <div class="rowd">
+                    <h4>Wind speed:</h4>
+                    <h1>{{wind}} m/s</h1>
+                </div>  
+            </div>
+        </div>
+</div>
+</body>
+</html>
